@@ -88,7 +88,7 @@ const data = [
   },
   // Added new one here
   {
-    title: 'Test',
+    title: 'Test, this was manually added to array',
     date: '5/6/2020',
     firstParagraph: 'This is a test.',
     secondParagraph: 'This is also a test',
@@ -159,3 +159,11 @@ data.forEach(obj => {
   const article = articleCreator(obj)
   document.querySelector('div.articles').appendChild(article);
 })
+
+document.querySelector('div.articles').appendChild(articleCreator({
+  title: 'Second Test, this was added via appendChild',
+  date: '5/6/2020',
+  firstParagraph: 'hi',
+  secondParagraph: 'bye',
+  thirdParagraph: 'ok'
+}));
