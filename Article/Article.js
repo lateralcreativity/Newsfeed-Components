@@ -128,7 +128,7 @@ function articleCreator(articleData) {
   const articleContentOne = document.createElement('p');
   const articleContentTwo = document.createElement('p');
   const articleContentThree = document.createElement('p');
-  const expandButton = document.createElement('button');
+  const expandButton = document.createElement('span');
 
   article.appendChild(articleTitle);
   article.appendChild(articleDate);
@@ -146,6 +146,7 @@ function articleCreator(articleData) {
   articleContentOne.textContent = firstParagraph;
   articleContentTwo.textContent = secondParagraph;
   articleContentThree.textContent = thirdParagraph;
+  expandButton.textContent = 'Expand';
 
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article-open');
